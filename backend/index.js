@@ -16,7 +16,7 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 app.get('/hello', function (req, res, next) {
   console.log('hello ' + req.query.id);
-  res.set('Cache-Control', 'max-age=5, stale-while-revalidate=10');
+  res.set('Cache-Control', 'max-age=10');
   const second = (new Date()).getSeconds();
   const min = (new Date()).getMinutes();
   const hour = (new Date()).getHours();
