@@ -13,4 +13,3 @@ export const hello = async(id: string) => {
     return Promise.reject(e);
   }
 }
-// test commit
