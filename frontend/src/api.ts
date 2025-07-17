@@ -7,6 +7,7 @@ const instance = axios.create({
 
 export const hello = async(id: string) => {
   try {
+    console.log('hello world' + id);
     const { data } = await instance.get(`/hello?id=${id}`);
     return Promise.resolve(data);
   } catch (e) {
